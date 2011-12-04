@@ -1,0 +1,1018 @@
+
+
+Started GET "/assets/rails.png" for 0:0:0:0:0:0:0:1 at Sat Dec 03 15:53:05 -0800 2011
+  [1m[36m (3.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35m (5.0ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (6.0ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35m (1.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to AddTeachersTable (20111204000213)
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE `teachers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(64), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20111204000213')
+  [1m[36m (0.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35m (1.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+  [1m[36m (3.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to AddTeachersTable (20111204000213)
+Migrating to CreateTeachers (20111204000950)
+  [1m[36m (17.0ms)[0m  [1mCREATE TABLE `teachers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+ActiveRecord::JDBCError: Table 'teachers' already exists: CREATE TABLE `teachers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (4.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35m (1.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to AddTeachersTable (20111204000213)
+Migrating to CreateTeachers (20111204000950)
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE `teachers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+ActiveRecord::JDBCError: Table 'teachers' already exists: CREATE TABLE `teachers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (4.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateTeachers (20111204000950)
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE `teachers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(64), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20111204000950')
+  [1m[36m (0.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/teachers" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:24:28 -0800 2011
+  [1m[36m (2.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+
+ActionController::RoutingError (No route matches [GET] "/teachers"):
+  
+
+Rendered /export/home/marcow/NetBeansProjects/jruby-1.6.5/lib/ruby/gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/teacher" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:24:34 -0800 2011
+
+ActionController::RoutingError (No route matches [GET] "/teacher"):
+  
+
+Rendered /export/home/marcow/NetBeansProjects/jruby-1.6.5/lib/ruby/gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/rails.png" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:25:26 -0800 2011
+  [1m[36m (1.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+Served asset /rails.png - 200 OK (35ms)
+
+
+Started GET "/teachers" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:25:32 -0800 2011
+
+ActionController::RoutingError (No route matches [GET] "/teachers"):
+  
+
+Rendered /export/home/marcow/NetBeansProjects/jruby-1.6.5/lib/ruby/gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/teacher" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:25:34 -0800 2011
+
+ActionController::RoutingError (No route matches [GET] "/teacher"):
+  
+
+Rendered /export/home/marcow/NetBeansProjects/jruby-1.6.5/lib/ruby/gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/teachers" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:41 -0800 2011
+  [1m[36m (3.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  Processing by TeachersController#index as HTML
+  [1m[35mTeacher Load (1.0ms)[0m  SELECT `teachers`.* FROM `teachers` 
+Rendered teachers/index.html.erb within layouts/application (6.0ms)
+Compiled application.css  (17ms)  (pid 24532)
+Compiled scaffolds.css  (245ms)  (pid 24532)
+Compiled teachers.css  (9ms)  (pid 24532)
+Compiled application.js  (39ms)  (pid 24532)
+Compiled jquery.js  (62ms)  (pid 24532)
+Compiled jquery_ujs.js  (3ms)  (pid 24532)
+Compiled teachers.js  (1509ms)  (pid 24532)
+Completed 200 OK in 2634ms (Views: 2630.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:46 -0800 2011
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:46 -0800 2011
+Served asset /scaffolds.css - 200 OK (16ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:46 -0800 2011
+Served asset /teachers.css - 200 OK (29ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:46 -0800 2011
+Served asset /jquery.js - 200 OK (15ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:46 -0800 2011
+Served asset /teachers.js - 200 OK (16ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:46 -0800 2011
+Served asset /jquery_ujs.js - 200 OK (17ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:46 -0800 2011
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/teachers/new" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:48 -0800 2011
+  Processing by TeachersController#new as HTML
+Rendered teachers/_form.html.erb (46.0ms)
+Rendered teachers/new.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 106ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:48 -0800 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:48 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:48 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:48 -0800 2011
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:48 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:48 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:48 -0800 2011
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/teachers" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:50 -0800 2011
+  Processing by TeachersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1509gn7aZ8+NZ/eEsfKvcgqH2jQ0epzHSSyZgyPyO6Q=", "commit"=>"Create Teacher"}
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO `teachers` (`created_at`, `name`, `updated_at`) VALUES ('2011-12-04 00:28:51', NULL, '2011-12-04 00:28:51')[0m
+Redirected to http://localhost:3000/teachers/1
+Completed 302 Found in 51ms
+
+
+Started GET "/teachers/1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:51 -0800 2011
+  Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeacher Load (5.0ms)[0m  SELECT `teachers`.* FROM `teachers` WHERE `teachers`.`id` = 1 LIMIT 1
+Rendered teachers/show.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 77ms (Views: 63.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:51 -0800 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:51 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:51 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:51 -0800 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:51 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:51 -0800 2011
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:51 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/teachers/1/edit" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:55 -0800 2011
+  Processing by TeachersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeacher Load (2.0ms)[0m  [1mSELECT `teachers`.* FROM `teachers` WHERE `teachers`.`id` = 1 LIMIT 1[0m
+Rendered teachers/_form.html.erb (28.0ms)
+Rendered teachers/edit.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 99ms (Views: 82.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:55 -0800 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:55 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:55 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:55 -0800 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:55 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:55 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:28:55 -0800 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/teachers/1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:29:25 -0800 2011
+  Processing by TeachersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1509gn7aZ8+NZ/eEsfKvcgqH2jQ0epzHSSyZgyPyO6Q=", "commit"=>"Update Teacher", "id"=>"1"}
+  [1m[35mTeacher Load (1.0ms)[0m  SELECT `teachers`.* FROM `teachers` WHERE `teachers`.`id` = 1 LIMIT 1
+Redirected to http://localhost:3000/teachers/1
+Completed 302 Found in 37ms
+
+
+Started GET "/teachers/1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:29:25 -0800 2011
+  Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeacher Load (1.0ms)[0m  [1mSELECT `teachers`.* FROM `teachers` WHERE `teachers`.`id` = 1 LIMIT 1[0m
+Rendered teachers/show.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 75ms (Views: 61.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:29:25 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:29:25 -0800 2011
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:29:25 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:29:25 -0800 2011
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:29:25 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:29:25 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:29:25 -0800 2011
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/teachers/" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:34:33 -0800 2011
+  Processing by TeachersController#index as HTML
+  [1m[35mTeacher Load (2.0ms)[0m  SELECT `teachers`.* FROM `teachers` 
+Rendered teachers/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 57ms (Views: 49.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:34:33 -0800 2011
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:34:33 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:34:33 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:34:33 -0800 2011
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:34:33 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:34:33 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:34:33 -0800 2011
+Served asset /application.js - 304 Not Modified (1ms)
+  [1m[36m (5.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35m (1.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateTeachers (20111204002733)
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE `teachers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(64), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20111204002733')
+  [1m[36m (0.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/teachers/" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:04 -0800 2011
+  [1m[36m (2.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  Processing by TeachersController#index as HTML
+  [1m[35mTeacher Load (1.0ms)[0m  SELECT `teachers`.* FROM `teachers` 
+Rendered teachers/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 125ms (Views: 119.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:06 -0800 2011
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:06 -0800 2011
+Served asset /scaffolds.css - 200 OK (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:06 -0800 2011
+Served asset /jquery.js - 200 OK (23ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:06 -0800 2011
+Served asset /teachers.css - 200 OK (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:06 -0800 2011
+Served asset /jquery_ujs.js - 200 OK (23ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:06 -0800 2011
+Served asset /teachers.js - 200 OK (14ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:06 -0800 2011
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/teachers/new" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:08 -0800 2011
+  Processing by TeachersController#new as HTML
+Rendered teachers/_form.html.erb (33.0ms)
+Rendered teachers/new.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 77ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:08 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:08 -0800 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:08 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:08 -0800 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:08 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:08 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:36:08 -0800 2011
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/teachers/new" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:04 -0800 2011
+  Processing by TeachersController#new as HTML
+Rendered teachers/_form.html.erb (63.0ms)
+Rendered teachers/new.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 94ms (Views: 91.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:04 -0800 2011
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:04 -0800 2011
+Served asset /teachers.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:04 -0800 2011
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:04 -0800 2011
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:04 -0800 2011
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:04 -0800 2011
+Served asset /teachers.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:04 -0800 2011
+Served asset /application.js - 200 OK (1ms)
+
+
+Started POST "/teachers" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:09 -0800 2011
+  Processing by TeachersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1509gn7aZ8+NZ/eEsfKvcgqH2jQ0epzHSSyZgyPyO6Q=", "name"=>"foo", "commit"=>"Create Teacher"}
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO `teachers` (`created_at`, `name`, `updated_at`) VALUES ('2011-12-04 00:40:09', NULL, '2011-12-04 00:40:09')[0m
+Redirected to http://localhost:3000/teachers/1
+Completed 302 Found in 48ms
+
+
+Started GET "/teachers/1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:09 -0800 2011
+  Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeacher Load (7.0ms)[0m  SELECT `teachers`.* FROM `teachers` WHERE `teachers`.`id` = 1 LIMIT 1
+Rendered teachers/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 68ms (Views: 51.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:09 -0800 2011
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:09 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:09 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:09 -0800 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:09 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:09 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:09 -0800 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/teachers" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:13 -0800 2011
+  Processing by TeachersController#index as HTML
+  [1m[36mTeacher Load (2.0ms)[0m  [1mSELECT `teachers`.* FROM `teachers` [0m
+Rendered teachers/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 100ms (Views: 92.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:13 -0800 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:13 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:13 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:13 -0800 2011
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:13 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:13 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:40:13 -0800 2011
+Served asset /application.js - 304 Not Modified (6ms)
+  [1m[36m (3.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateTeachers (20111204002733)
+Migrating to CreateStudents (20111204004544)
+  [1m[36m (2.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateTeachers (20111204002733)
+Migrating to CreateStudents (20111204004544)
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE `students` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20111204004544')
+  [1m[36m (0.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/students" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:33 -0800 2011
+  Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (1.0ms)[0m  SELECT `students`.* FROM `students` 
+Rendered students/index.html.erb within layouts/application (4.0ms)
+Compiled application.css  (12ms)  (pid 24721)
+Compiled students.css  (9ms)  (pid 24721)
+Compiled application.js  (26ms)  (pid 24721)
+Compiled students.js  (1494ms)  (pid 24721)
+Completed 200 OK in 1906ms (Views: 1903.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:35 -0800 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:36 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:36 -0800 2011
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:36 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:36 -0800 2011
+Served asset /students.css - 200 OK (17ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:36 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:36 -0800 2011
+Served asset /students.js - 200 OK (27ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:36 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:36 -0800 2011
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/students/new" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:38 -0800 2011
+  Processing by StudentsController#new as HTML
+Rendered students/_form.html.erb (35.0ms)
+Rendered students/new.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 109ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:38 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:38 -0800 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/students.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:38 -0800 2011
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:38 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:38 -0800 2011
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:38 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/students.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:38 -0800 2011
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:38 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:38 -0800 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/students" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:52 -0800 2011
+  Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1509gn7aZ8+NZ/eEsfKvcgqH2jQ0epzHSSyZgyPyO6Q=", "student"=>{"name"=>"student1"}, "commit"=>"Create Student"}
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `students` (`created_at`, `name`, `updated_at`) VALUES ('2011-12-04 00:47:52', 'student1', '2011-12-04 00:47:52')[0m
+Redirected to http://localhost:3000/students/1
+Completed 302 Found in 39ms
+
+
+Started GET "/students/1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:52 -0800 2011
+  Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (1.0ms)[0m  SELECT `students`.* FROM `students` WHERE `students`.`id` = 1 LIMIT 1
+Rendered students/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 56ms (Views: 41.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:52 -0800 2011
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:52 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:52 -0800 2011
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:52 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:52 -0800 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:52 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:52 -0800 2011
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:52 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:52 -0800 2011
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/students" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:55 -0800 2011
+  Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (1.0ms)[0m  [1mSELECT `students`.* FROM `students` [0m
+Rendered students/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 46ms (Views: 39.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:55 -0800 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:55 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:55 -0800 2011
+Served asset /students.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:55 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:55 -0800 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:55 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:55 -0800 2011
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:55 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:47:55 -0800 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/teachers" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:09 -0800 2011
+  Processing by TeachersController#index as HTML
+  [1m[35mTeacher Load (1.0ms)[0m  SELECT `teachers`.* FROM `teachers` 
+Rendered teachers/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 66ms (Views: 59.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:09 -0800 2011
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:09 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:09 -0800 2011
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:09 -0800 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:09 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:09 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:09 -0800 2011
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:09 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:09 -0800 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/teachers/1/edit" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:11 -0800 2011
+  Processing by TeachersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeacher Load (1.0ms)[0m  [1mSELECT `teachers`.* FROM `teachers` WHERE `teachers`.`id` = 1 LIMIT 1[0m
+Rendered teachers/_form.html.erb (54.0ms)
+Rendered teachers/edit.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 114ms (Views: 99.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:11 -0800 2011
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:11 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/students.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:11 -0800 2011
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:11 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:11 -0800 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:11 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:11 -0800 2011
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:11 -0800 2011
+Served asset /teachers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:11 -0800 2011
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/teachers/1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:16 -0800 2011
+  Processing by TeachersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1509gn7aZ8+NZ/eEsfKvcgqH2jQ0epzHSSyZgyPyO6Q=", "teacher"=>{"name"=>"foo"}, "commit"=>"Update Teacher", "id"=>"1"}
+  [1m[35mTeacher Load (1.0ms)[0m  SELECT `teachers`.* FROM `teachers` WHERE `teachers`.`id` = 1 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mUPDATE `teachers` SET `name` = 'foo', `updated_at` = '2011-12-04 00:50:16' WHERE `teachers`.`id` = 1[0m
+Redirected to http://localhost:3000/teachers/1
+Completed 302 Found in 39ms
+
+
+Started GET "/teachers/1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:16 -0800 2011
+  Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeacher Load (1.0ms)[0m  SELECT `teachers`.* FROM `teachers` WHERE `teachers`.`id` = 1 LIMIT 1
+Rendered teachers/show.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 127ms (Views: 110.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:16 -0800 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:16 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:16 -0800 2011
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:16 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:16 -0800 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:16 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:16 -0800 2011
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:16 -0800 2011
+Served asset /teachers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:16 -0800 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/teachers" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:18 -0800 2011
+  Processing by TeachersController#index as HTML
+  [1m[36mTeacher Load (2.0ms)[0m  [1mSELECT `teachers`.* FROM `teachers` [0m
+Rendered teachers/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 65ms (Views: 52.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:19 -0800 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:19 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:19 -0800 2011
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:19 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:19 -0800 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:19 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:19 -0800 2011
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:19 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:19 -0800 2011
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/teachers/new" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:26 -0800 2011
+  Processing by TeachersController#new as HTML
+Rendered teachers/_form.html.erb (24.0ms)
+Rendered teachers/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 59ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:26 -0800 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:26 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:26 -0800 2011
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:26 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:26 -0800 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:26 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:26 -0800 2011
+Served asset /students.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:26 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:26 -0800 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/teachers" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:30 -0800 2011
+  Processing by TeachersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1509gn7aZ8+NZ/eEsfKvcgqH2jQ0epzHSSyZgyPyO6Q=", "teacher"=>{"name"=>"bar"}, "commit"=>"Create Teacher"}
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `teachers` (`created_at`, `name`, `updated_at`) VALUES ('2011-12-04 00:50:30', 'bar', '2011-12-04 00:50:30')
+Redirected to http://localhost:3000/teachers/2
+Completed 302 Found in 38ms
+
+
+Started GET "/teachers/2" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:30 -0800 2011
+  Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (1.0ms)[0m  [1mSELECT `teachers`.* FROM `teachers` WHERE `teachers`.`id` = 2 LIMIT 1[0m
+Rendered teachers/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 56ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:30 -0800 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:31 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/students.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:31 -0800 2011
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:31 -0800 2011
+Served asset /teachers.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:31 -0800 2011
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:31 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:31 -0800 2011
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:31 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:31 -0800 2011
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/teachers" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:32 -0800 2011
+  Processing by TeachersController#index as HTML
+  [1m[35mTeacher Load (1.0ms)[0m  SELECT `teachers`.* FROM `teachers` 
+Rendered teachers/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 59ms (Views: 52.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:33 -0800 2011
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:33 -0800 2011
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/students.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:33 -0800 2011
+Served asset /students.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/teachers.css?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:33 -0800 2011
+Served asset /teachers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:33 -0800 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:33 -0800 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:33 -0800 2011
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/teachers.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:33 -0800 2011
+Served asset /teachers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 0:0:0:0:0:0:0:1 at Sat Dec 03 16:50:33 -0800 2011
+Served asset /application.js - 304 Not Modified (2ms)

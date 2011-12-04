@@ -1,0 +1,36 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+development:
+<% if RUBY_PLATFORM =~ /java/ %>
+  adapter: jdbc
+<% else %>
+  adapter: mysql
+<% end %>
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost/ClassRoom_dev
+  hostname: localhost
+  port: 3306
+  database: junction2_development
+  username: root
+  password: root
+
+test:
+  adapter: mysql
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost/ClassRoom_test
+  hostname: localhost
+  port: 3306
+  database: junction2_test
+  username: root
+  password: root
+
+production:
+  adapter: mysql
+  hostname: localhost
+  port: 3306
+  database: ClassRoom_prod
+  username: root
+  password: root
