@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @course.name %>
+</p>
+<p>
+  <b>Teacher:</b>
+  <%= @course.teacher.name %>
+</p>
+<p>
+  <b>Room:</b>
+  <%= @course.room.name %>
+</p>
+
+<p><b>Select Students:</b></p>
+
+<% @cs_ids = @course.course_students.map { |cs| cs.student.id }
+@students = Student.all(:order => "name") -%>
+<%= form_for(@students, :method => :post, :url => course_students_path(@course)) do |f| %>
+<table>
+  <tr>
+    <th>Selected</th>
+    <th>Id</th>
+    <th>Name</th>
+  </tr>
+  <% @students.each do |s| -%>
+  <tr>
+    <td><%=check_box_tag "students[]", s.id, @cs_ids.include?(s.id), :id=>"student-#{s.id}" %></td>
+    <td><%= s.id %></td>
+    <td><%= s.name %></td>
+  </tr>
+  <% end -%>
+</table>
+ <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

@@ -1,7 +1,15 @@
 ClassRoom::Application.routes.draw do
+  resources :courses
+  
+  resources :rooms
+
   resources :students
 
   resources :teachers
+
+  match 'courses/:id/students' => 'courses#students', :as => :course_students
+  match 'courses/:id/postion' => 'courses#position', :as => :course_student_position
+  match 'courses/:id/evaluation' => 'courses#evaluation', :as => :course_evaluation
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

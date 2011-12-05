@@ -33,3 +33,4 @@ gem 'therubyrhino'
 # To use debugger
 # gem 'ruby-debug'
 
+gem 'jruby-openssl'

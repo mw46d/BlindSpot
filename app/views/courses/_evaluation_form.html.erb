@@ -1,0 +1,14 @@
+<%= form_for(evaluation, :method => :post, :url => course_evaluation_path(course)) do |f| %>
+  Ajax Form buttoms do NOT work yet!!
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date %>
+  </div>
+  <input type="submit" name="submit" class="button" id="submit_btn" value="Add" />
+  <input type="submit" name="cancel" class="button" id="cancel_btn" value="Cancel" />
+
+<% end %>

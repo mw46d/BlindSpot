@@ -1,0 +1,100 @@
+<style>
+  #class_room { width: 450px; height: 450px; float: left; margin: 10px;
+  background-color: #eeeeee; }
+  .droppable { width: 40px; height: 40px; }
+</style>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @course.name %>
+</p>
+<p>
+  <b>Room:</b>
+  <%= @course.room.name %>
+</p>
+
+<a href="#" id="add_evaluation" onclick="add_evaluation(this); return false;">Add Evaluation</a>
+<div id="add_evaluation_form"></div>
+
+<p>Students:</p>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Location-X</th>
+    <th>Location-Y</th>
+    <% @course.course_evaluations.each do |ce| -%>
+      <th><%= ce.name %><br /><%= ce.date %></th>
+    <% end -%>
+  </tr>
+  <% @course.course_students.each do |cs| -%>
+  <tr id="course_student_row_<%= cs.id %>">
+    <%= render :partial => 'student_table_row', :locals => { :cs => cs, :css => @course.course_evaluations } %>
+  </tr>
+  <% end -%>
+</table>
+
+
+<div id="class_room">
+  <div id="course_teacher_icon" class="droppable">
+    <%= image_tag 'teacher_icon.jpg', :alt => "Teacher: #{@course.teacher.name}" %>
+    <br />
+    <%= @course.teacher.name %>
+  </div>
+
+  <% @course.course_students.each do |cs| -%>
+    <div id="<%= "course_student_icon_#{cs.id}" %>" class="droppable">
+      <%= image_tag 'student_icon.jpg', :alt => "Student: #{cs.student.name}" %>
+      <br />
+      <%= cs.student.name %>
+    </div>
+  <% end -%>
+</div>
+<br />
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>
+
+<script>
+  function add_evaluation(elem) {
+    $("#add_evaluation_form").load("<%= course_evaluation_path(@course.id) %>")
+    $(".button").click(function() {
+      alert("mw " + $(this)[0].id);
+      if ($(this)[0].id == 'cancel_btn') {
+        $("#add_evaluation_form").html('');
+      }
+    });
+  };
+  $(document).ready(function(){
+    x = $("#class_room").offset().left;
+    y = $("#class_room").offset().top;
+    new_x = x + $("#class_room").width() / 2 - $("#course_teacher_icon").width() / 2;
+    new_y = y + $("#class_room").height() - $("#course_teacher_icon").height();
+    $("#course_teacher_icon").offset({ top: new_y, left: new_x });
+    $("#course_teacher_icon").draggable({ containment: 'parent' });
+    <% @course.course_students.each do |cs| -%>
+        x = $("#class_room").offset().left;
+        y = $("#class_room").offset().top;
+        new_x = x + <%=  cs.position_x.blank? ? 0 : cs.position_x %>;
+        new_y = y + $("#class_room").height() - <%= cs.position_y .blank? ? 0 : cs.position_y %> -
+          $("#course_student_icon_<%= cs.id %>").height();
+        $("#course_student_icon_<%= cs.id %>").offset({ top: new_y, left: new_x });
+        $("#course_student_icon_<%= cs.id %>").draggable({ containment: 'parent' });
+        
+    <% end -%>
+    $("#class_room").droppable({
+      drop: function(event, ui) {
+        x = ui.offset.left - $(this).offset().left;
+        y = $(this).height() - (ui.offset.top - $(this).offset().top) - ui.draggable.height()
+        $(this).load("<%= %>", {} )
+        if (ui.draggable[0].id.match(/course_student_icon_/)) {
+          cs_id = ui.draggable[0].id.substring(20)
+          $("#course_student_row_" + cs_id).load("<%= course_student_position_path(@course.id) %>",
+            { course_student_id: cs_id, position_x: x, position_y: y} );
+        }
+      }
+    });
+  });
+</script>

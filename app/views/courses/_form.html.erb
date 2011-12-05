@@ -1,0 +1,31 @@
+<%= form_for(@course) do |f| %>
+  <% if @course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% @course.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :teacher %><br />
+    <%= @teachers = Teacher.all(:order => "name")
+    f.collection_select(:teacher_id, @teachers, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :room %><br />
+    <%= @rooms = Room.all(:order => "name")
+    f.collection_select(:room_id, @rooms, :id, :name) %>
+  </div>
+ <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
